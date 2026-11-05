@@ -1,0 +1,15 @@
+# macOS metadata
+.DS_Store
+
+# Local execution logs
+/nix.log
+/nvim.log
+
+# Nix build output links
+/result
+/result-*
+/nix/result
+/nix/result-*
+
+# Machine-specific identity (never commit)
+/nix/local.nix
