@@ -2,11 +2,10 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 -- 基本設定
-config.color_scheme = 'Pro'
+config.color_scheme = 'Catppuccin Mocha'
 config.macos_window_background_blur = 20
 config.window_background_opacity = 0.8
 config.window_decorations = "RESIZE"
-config.window_background_gradient = { colors = { "#000000" } }
 
 -- フォント
 config.font = wezterm.font("JetBrains Mono", {
@@ -26,14 +25,17 @@ config.colors = {
   cursor_border = '#00FF00',
   selection_bg = '#D4F7D4',
   selection_fg = '#000000',
-  tab_bar = { inactive_tab_edge = "none" },
+  tab_bar = {
+    background = '#1e1e2e',
+    inactive_tab_edge = "none",
+  },
 }
 
 -- タブバー設定
 config.show_new_tab_button_in_tab_bar = false
 config.window_frame = {
-  inactive_titlebar_bg = "none",
-  active_titlebar_bg = "none",
+  inactive_titlebar_bg = "#1e1e2e",
+  active_titlebar_bg = "#1e1e2e",
   font = wezterm.font('JetBrains Mono', { weight = 'Bold' }),
 }
 
@@ -43,7 +45,7 @@ local SOLID_RIGHT_ARROW = wezterm.nerdfonts.ple_upper_left_triangle
 wezterm.on("format-tab-title", function(tab, tabs, panes, cfg, hover, max_width)
   local background = "#49575C"
   local foreground = "#FFFFFF"
-  local edge_background = "none"
+  local edge_background = "#1e1e2e"
 
   if tab.is_active then
     background = "#FFE1E1"
