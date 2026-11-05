@@ -1,0 +1,12 @@
+add_newline = false
+
+format = """$directory$git_branch ❯ """
+
+[directory]
+format = "[$path](fg:#a8d8ea) "
+
+[git_branch]
+format = "[$branch](fg:#d4a5e5) "
+
+[git_status]
+disabled = true
